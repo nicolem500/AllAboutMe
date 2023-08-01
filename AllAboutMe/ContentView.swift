@@ -6,21 +6,50 @@
 //
 
 import SwiftUI
-
+//COMMENT
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            HStack {
+                Image("catAboutMe")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                Image("aur")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            }
+            
+            Text("All about me:")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            Text("Nicole")
+                .font(.headline)
+                .fontWeight(.thin)
+            
+            Button("Fun Facts...") {
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(.yellow)
+                    
+            HStack {
+                Image("pencilAboutMe")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                Image("sunAboutMe")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            }
         }
-        .padding()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
